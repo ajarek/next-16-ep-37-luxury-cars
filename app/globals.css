@@ -1,26 +1,124 @@
 @import "tailwindcss";
 
-:root {
-  --background: #ffffff;
-  --foreground: #171717;
+@theme {
+  --color-primary-gold: #f2ca50;
+  --color-on-error-container: #ffdad6;
+  --color-surface-container-highest: #353534;
+  --color-on-tertiary-fixed-variant: #474746;
+  --color-secondary-fixed: #e2e2e2;
+  --color-surface-container-low: #1c1b1b;
+  --color-tertiary-container: #b4b2b2;
+  --color-on-surface-variant: #d0c5af;
+  --color-inverse-on-surface: #313030;
+  --color-tertiary-fixed: #e5e2e1;
+  --color-primary-gold-container: #d4af37;
+  --color-surface-tint: #e9c349;
+  --color-surface-container-high: #2a2a2a;
+  --color-on-tertiary: #313030;
+  --color-outline: #99907c;
+  --color-on-surface: #e5e2e1;
+  --color-surface-container: #201f1f;
+  --color-error-container: #93000a;
+  --color-on-tertiary-container: #454544;
+  --color-surface: #131313;
+  --color-on-secondary-fixed-variant: #454747;
+  --color-secondary: #c6c6c7;
+  --color-secondary-fixed-dim: #c6c6c7;
+  --color-on-secondary: #2f3131;
+  --color-on-background: #e5e2e1;
+  --color-inverse-surface: #e5e2e1;
+  --color-surface-dim: #131313;
+  --color-on-primary-gold-container: #554300;
+  --color-tertiary-fixed-dim: #c8c6c5;
+  --color-on-secondary-fixed: #1a1c1c;
+  --color-secondary-container: #454747;
+  --color-inverse-primary-gold: #735c00;
+  --color-primary-gold-fixed-dim: #e9c349;
+  --color-background: #131313;
+  --color-tertiary: #d0cdcd;
+  --color-surface-variant: #353534;
+  --color-primary-gold-fixed: #ffe088;
+  --color-on-primary-gold-fixed-variant: #574500;
+  --color-on-primary-gold-fixed: #241a00;
+  --color-on-tertiary-fixed: #1c1b1b;
+  --color-surface-bright: #3a3939;
+  --color-on-error: #690005;
+  --color-outline-variant: #4d4635;
+  --color-error: #ffb4ab;
+  --color-on-secondary-container: #b4b5b5;
+  --color-on-primary-gold: #3c2f00;
+  --color-surface-container-lowest: #0e0e0e;
+
+  --spacing-stack-md: 16px;
+  --spacing-margin-page: 24px;
+  --spacing-gutter: 16px;
+  --spacing-stack-sm: 8px;
+  --spacing-glass-padding: 20px;
+  --spacing-stack-lg: 32px;
+
+  --font-hanken: var(--font-hanken);
+  --font-geist: var(--font-geist);
+
+  --font-body-md: var(--font-hanken);
+  --font-headline-lg-mobile: var(--font-hanken);
+  --font-data-lg: var(--font-geist);
+  --font-label-sm: var(--font-geist);
+  --font-headline-lg: var(--font-hanken);
+  --font-display-lg: var(--font-hanken);
+
+  --text-body-md: 16px;
+  --text-body-md--line-height: 24px;
+  --text-body-md--font-weight: 400;
+
+  --text-headline-lg-mobile: 24px;
+  --text-headline-lg-mobile--line-height: 32px;
+  --text-headline-lg-mobile--font-weight: 500;
+
+  --text-data-lg: 20px;
+  --text-data-lg--line-height: 28px;
+  --text-data-lg--font-weight: 600;
+
+  --text-label-sm: 12px;
+  --text-label-sm--line-height: 16px;
+  --text-label-sm--letter-spacing: 0.05em;
+  --text-label-sm--font-weight: 500;
+
+  --text-headline-lg: 32px;
+  --text-headline-lg--line-height: 40px;
+  --text-headline-lg--letter-spacing: -0.01em;
+  --text-headline-lg--font-weight: 500;
+
+  --text-display-lg: 48px;
+  --text-display-lg--line-height: 56px;
+  --text-display-lg--letter-spacing: -0.02em;
+  --text-display-lg--font-weight: 600;
 }
 
-@theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
+/* Custom classes */
+.glass {
+  background: rgba(255, 255, 255, 0.05);
+  backdrop-filter: blur(20px);
+  border: 1px solid rgba(255, 255, 255, 0.1);
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
+.gold-glow {
+  box-shadow: 0 0 20px rgba(242, 202, 80, 0.2);
+}
+
+.gold-glow-hover:hover {
+  box-shadow: 0 0 30px rgba(242, 202, 80, 0.4);
+}
+
+.radial-surface {
+  background: radial-gradient(circle at center, rgba(242, 202, 80, 0.15) 0%, transparent 70%);
+}
+
+.material-symbols-outlined {
+  font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
 }
 
 body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  background-color: #131313;
+  color: #e5e2e1;
+  font-family: var(--font-hanken);
 }
