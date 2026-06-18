@@ -117,6 +117,27 @@
   font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
 }
 
+/* Poświata podążająca za kursorem — napędzana zmiennymi --mouse-x/--mouse-y
+   ustawianymi przez komponent CarCard (React onMouseMove). */
+.card-glow::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: radial-gradient(
+    360px circle at var(--mouse-x, 50%) var(--mouse-y, 50%),
+    rgba(242, 202, 80, 0.12),
+    transparent 45%
+  );
+  opacity: 0;
+  transition: opacity 0.4s ease;
+  pointer-events: none;
+  z-index: 1;
+}
+
+.card-glow:hover::before {
+  opacity: 1;
+}
+
 body {
   background-color: #131313;
   color: #e5e2e1;
