@@ -25,6 +25,7 @@ export interface CollectionCar {
   badge: string;
   accent: string;
   available: boolean;
+  image: string;
 }
 
 export const cars: Car[] = [

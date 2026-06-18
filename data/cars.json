@@ -11,7 +11,8 @@
     "topSpeed": "440 KM/H",
     "badge": "W16 8.0L",
     "accent": "#1B3A5B",
-    "available": true
+    "available": true,
+    "image": "https://carprices.ae/uploads/api_uploads_img_trim_1686164624483_16fe430f9e.png"
   },
   {
     "name": "Pagani Huayra",
@@ -25,7 +26,8 @@
     "topSpeed": "350 KM/H",
     "badge": "V12 AMG",
     "accent": "#5A1A2A",
-    "available": false
+    "available": false,
+    "image": "https://cdn.renderhub.com/squir/pagani-huayra-r-evo-2024/pagani-huayra-r-evo-2024-14.jpg"
   },
   {
     "name": "Koenigsegg Jesko",
@@ -39,7 +41,8 @@
     "topSpeed": "531 KM/H",
     "badge": "V8 Twin-Turbo",
     "accent": "#3A3A3A",
-    "available": false
+    "available": false,
+    "image": "https://www.ccarprice.com/products/Koenigsegg_Jesko_2025.jpg"
   },
   {
     "name": "McLaren W1",
@@ -53,7 +56,8 @@
     "topSpeed": "350 KM/H",
     "badge": "V8 Hybrid",
     "accent": "#C4521F",
-    "available": true
+    "available": true,
+    "image": "https://img-new.cgtrader.com/items/5750907/852dabf54c/mclaren-w1-2025-3d-model-852dabf54c.jpg"
   },
   {
     "name": "Ferrari SF90",
@@ -67,7 +71,8 @@
     "topSpeed": "340 KM/H",
     "badge": "V8 Hybrid",
     "accent": "#7A0A0A",
-    "available": true
+    "available": true,
+    "image": "https://eminencesupercarhire.co.uk/wp-content/uploads/2025/05/Screenshot_2-removebg-preview.png"
   },
   {
     "name": "Lamborghini Revuelto",
@@ -81,7 +86,8 @@
     "topSpeed": "350 KM/H",
     "badge": "V12 Hybrid",
     "accent": "#2F4F2F",
-    "available": true
+    "available": true,
+    "image": "https://vipcar.international/sites/default/files/styles/custompan/public/pi/29502/2024-lamborghini-revuelto-dpo-1006856-pi-29502466885.png?itok=FA-dZqDG"
   },
   {
     "name": "Aston Martin Valhalla",
@@ -95,7 +101,8 @@
     "topSpeed": "350 KM/H",
     "badge": "V8 Hybrid",
     "accent": "#0E3B2E",
-    "available": true
+    "available": true,
+    "image": "https://alcf.s3.us-west-1.amazonaws.com/_custom/2025/aston-martin/valhalla/Aston%20Martin.png"
   },
   {
     "name": "Bentley Continental",
@@ -109,7 +116,8 @@
     "topSpeed": "335 KM/H",
     "badge": "W12 Twin-Turbo",
     "accent": "#1A3A2A",
-    "available": true
+    "available": true,
+    "image": "https://png.pngtree.com/png-vector/20231023/ourmid/pngtree-bentley-continental-gt-light-transparent-background-png-image_10336955.png"
   },
   {
     "name": "Porsche 911",
@@ -123,7 +131,8 @@
     "topSpeed": "296 KM/H",
     "badge": "4.0L Flat-6",
     "accent": "#9E0C26",
-    "available": true
+    "available": true,
+    "image": "https://di-uploads-pod4.dealerinspire.com/porschelongbeach/uploads/2023/03/ezgif.com-webp-to-png-20.png"
   },
   {
     "name": "Range Rover SV",
@@ -137,7 +146,8 @@
     "topSpeed": "250 KM/H",
     "badge": "V8 Twin-Turbo",
     "accent": "#1C2B3A",
-    "available": true
+    "available": true,
+    "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRDOyjbfa3nbfb-q3P8DJYO4co5cpTJDcgfwg&s"
   },
   {
     "name": "Rolls-Royce Spectre",
@@ -151,7 +161,8 @@
     "topSpeed": "250 KM/H",
     "badge": "Fully Electric",
     "accent": "#3A1F2E",
-    "available": true
+    "available": true,
+    "image": "https://www.rollsroycemotorcarscharlotte.com/wp-content/uploads/spectre-1.png"
   },
   {
     "name": "Mercedes-Maybach",
@@ -165,6 +176,7 @@
     "topSpeed": "250 KM/H",
     "badge": "V12 Biturbo",
     "accent": "#1A1A2E",
-    "available": true
+    "available": true,
+    "image": "https://lh3.googleusercontent.com/aida-public/AB6AXuDyNkClcM6k79Iufoxxrg6gVPrV4ziZzj3gjrle_M_kEh8V83sa3SROCVBvOIJ9O29JUU7stAe5LprRZvWOqm_aQ9yTztbpFIhm5xtOGniJ8Be2orBlrVSA2TF8A_6uFGORYYDnKpOeS_OPfzmNJ2uea-_Io_M6DjnnncKYNwJSShsMEKlJLFx4moHMMuA-BgUd5NTWW2qtaUFBcMeV--yQgWNTKZOuBCF5Rq8wZrImEgLtiI9cD0sM7uN71uV6wsBloJUTFQI5ImY"
   }
 ]

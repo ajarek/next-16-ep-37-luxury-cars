@@ -2,6 +2,7 @@
 
 import { useRef } from "react";
 import type { CollectionCar } from "@/lib/cars";
+import Image from "next/image";
 
 interface CollectionCardProps {
   car: CollectionCar;
@@ -39,9 +40,13 @@ export default function CollectionCard({ car }: CollectionCardProps) {
       {/* Dekoracyjna wizualizacja auta — monogram marki + refleksy, zamiast zewnętrznego zdjęcia */}
       <div className="relative h-56 overflow-hidden" style={coverStyle}>
         <div className="absolute inset-0 flex items-center justify-center">
-          <span className="font-display-lg text-display-lg text-white/90 drop-shadow-2xl tracking-tighter select-none">
-            {car.monogram}
-          </span>
+          <Image
+            src={car.image}
+            alt={car.name}
+            width={500}
+            height={500}
+            className="w-full h-full object-cover"
+          />
         </div>
         {/* Refleks podłogi */}
         <div className="absolute bottom-0 left-0 w-full h-1/3 bg-linear-to-t from-black/70 to-transparent"></div>
