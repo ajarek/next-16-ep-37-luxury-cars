@@ -9,6 +9,24 @@ export interface Car {
   available?: boolean;
 }
 
+// Model z kolekcji — rozszerza podstawowy `Car` o dane specyficzne dla strony
+// kolekcji: kategorię (do filtrowania), monogram i akcent kolorystyczny
+// (do generowania autorskiego tła karty), oraz osiągi (0-100, prędkość maks.).
+export interface CollectionCar {
+  name: string;
+  year: string;
+  variant: string;
+  category: string;
+  monogram: string;
+  price: string;
+  power: string;
+  acceleration: string;
+  topSpeed: string;
+  badge: string;
+  accent: string;
+  available: boolean;
+}
+
 export const cars: Car[] = [
   {
     name: "BMW M8",

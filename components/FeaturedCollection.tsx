@@ -1,3 +1,4 @@
+import Link from "next/link";
 import CarCard from "@/components/CarCard";
 import { cars } from "@/lib/cars";
 
@@ -14,10 +15,13 @@ export default function FeaturedCollection() {
             asortymencie.
           </p>
         </div>
-        <button className="text-primary-gold font-label-sm text-label-sm flex items-center gap-2 hover:underline">
+        <Link
+          href="/collection"
+          className="text-primary-gold font-label-sm text-label-sm flex items-center gap-2 hover:underline"
+        >
           Zobacz cały salon{" "}
           <span className="material-symbols-outlined text-sm">north_east</span>
-        </button>
+        </Link>
       </div>
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-gutter">
         {cars.map((car) => (
