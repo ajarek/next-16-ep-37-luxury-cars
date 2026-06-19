@@ -1,5 +1,6 @@
 [
-  {
+  { 
+    "id": 1,
     "name": "Bugatti Chiron",
     "year": "2024",
     "variant": "Super Sport 300+",
@@ -14,7 +15,8 @@
     "available": true,
     "image": "https://carprices.ae/uploads/api_uploads_img_trim_1686164624483_16fe430f9e.png"
   },
-  {
+  { 
+    "id": 2,
     "name": "Pagani Huayra",
     "year": "2024",
     "variant": "Codalunga",
@@ -29,7 +31,8 @@
     "available": false,
     "image": "https://cdn.renderhub.com/squir/pagani-huayra-r-evo-2024/pagani-huayra-r-evo-2024-14.jpg"
   },
-  {
+  { 
+    "id": 3,
     "name": "Koenigsegg Jesko",
     "year": "2025",
     "variant": "Absolut",
@@ -44,7 +47,8 @@
     "available": false,
     "image": "https://www.ccarprice.com/products/Koenigsegg_Jesko_2025.jpg"
   },
-  {
+  { 
+    "id": 4,
     "name": "McLaren W1",
     "year": "2025",
     "variant": "Successor to P1",
@@ -59,7 +63,8 @@
     "available": true,
     "image": "https://img-new.cgtrader.com/items/5750907/852dabf54c/mclaren-w1-2025-3d-model-852dabf54c.jpg"
   },
-  {
+  { 
+    "id": 5,
     "name": "Ferrari SF90",
     "year": "2024",
     "variant": "Stradale Assetto Fiorano",
@@ -75,6 +80,7 @@
     "image": "https://eminencesupercarhire.co.uk/wp-content/uploads/2025/05/Screenshot_2-removebg-preview.png"
   },
   {
+    "id": 6,
     "name": "Lamborghini Revuelto",
     "year": "2024",
     "variant": "V12 Hybrid HPEV",
@@ -90,6 +96,7 @@
     "image": "https://vipcar.international/sites/default/files/styles/custompan/public/pi/29502/2024-lamborghini-revuelto-dpo-1006856-pi-29502466885.png?itok=FA-dZqDG"
   },
   {
+    "id": 7,
     "name": "Aston Martin Valhalla",
     "year": "2025",
     "variant": "First Plug-in Hybrid",
@@ -105,6 +112,7 @@
     "image": "https://alcf.s3.us-west-1.amazonaws.com/_custom/2025/aston-martin/valhalla/Aston%20Martin.png"
   },
   {
+    "id": 8,
     "name": "Bentley Continental",
     "year": "2024",
     "variant": "GT Speed Mulliner",
@@ -119,7 +127,8 @@
     "available": true,
     "image": "https://png.pngtree.com/png-vector/20231023/ourmid/pngtree-bentley-continental-gt-light-transparent-background-png-image_10336955.png"
   },
-  {
+  { 
+    "id": 9,
     "name": "Porsche 911",
     "year": "2024",
     "variant": "GT3 RS Weissach",
@@ -134,7 +143,8 @@
     "available": true,
     "image": "https://di-uploads-pod4.dealerinspire.com/porschelongbeach/uploads/2023/03/ezgif.com-webp-to-png-20.png"
   },
-  {
+  { 
+    "id": 10,
     "name": "Range Rover SV",
     "year": "2024",
     "variant": "Range Rover SV Autobiography",
@@ -149,7 +159,8 @@
     "available": true,
     "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRDOyjbfa3nbfb-q3P8DJYO4co5cpTJDcgfwg&s"
   },
-  {
+  { 
+    "id": 11,
     "name": "Rolls-Royce Spectre",
     "year": "2024",
     "variant": "First All-Electric Super Coupé",
@@ -164,7 +175,8 @@
     "available": true,
     "image": "https://www.rollsroycemotorcarscharlotte.com/wp-content/uploads/spectre-1.png"
   },
-  {
+  { 
+    "id": 12,
     "name": "Mercedes-Maybach",
     "year": "2024",
     "variant": "S 680 4MATIC",

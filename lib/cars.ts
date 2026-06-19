@@ -13,6 +13,7 @@ export interface Car {
 // kolekcji: kategorię (do filtrowania), monogram i akcent kolorystyczny
 // (do generowania autorskiego tła karty), oraz osiągi (0-100, prędkość maks.).
 export interface CollectionCar {
+  id: number;
   name: string;
   year: string;
   variant: string;

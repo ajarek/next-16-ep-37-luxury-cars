@@ -3,6 +3,7 @@
 import { useRef } from "react";
 import type { CollectionCar } from "@/lib/cars";
 import Image from "next/image";
+import Link from "next/link";
 
 interface CollectionCardProps {
   car: CollectionCar;
@@ -86,9 +87,9 @@ export default function CollectionCard({ car }: CollectionCardProps) {
               {car.year} · {car.variant}
             </p>
           </div>
-          <button className="w-10 h-10 rounded-full border border-primary-gold/30 flex items-center justify-center text-primary-gold group-hover:bg-primary-gold group-hover:text-on-primary-gold transition-all">
+          <Link href={`/collection/${car.id}`} className="w-10 h-10 rounded-full border border-primary-gold/30 flex items-center justify-center text-primary-gold group-hover:bg-primary-gold group-hover:text-on-primary-gold transition-all">
             <span className="material-symbols-outlined text-sm">north_east</span>
-          </button>
+          </Link>
         </div>
 
         {/* Specyfikacja osiągów */}

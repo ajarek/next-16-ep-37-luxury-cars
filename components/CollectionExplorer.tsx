@@ -54,7 +54,7 @@ export default function CollectionExplorer({ cars }: CollectionExplorerProps) {
       {/* Siatka kart */}
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-gutter">
         {filtered.map((car) => (
-          <CollectionCard key={car.name} car={car} />
+          <CollectionCard key={car.id} car={car} />
         ))}
       </div>
     </section>
