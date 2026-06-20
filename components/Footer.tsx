@@ -6,7 +6,7 @@ export default function Footer() {
           LUXE AUTO
         </div>
         <p className="text-on-surface-variant text-label-sm font-label-sm max-w-xs">
-          © 2024 LUXE AUTO. Wszelkie prawa zastrzeżone. Definiujemy na nowo
+          © 2026 LUXE AUTO. Wszelkie prawa zastrzeżone. Definiujemy na nowo
           doskonałość motoryzacyjną dla współczesnych koneserów.
         </p>
       </div>

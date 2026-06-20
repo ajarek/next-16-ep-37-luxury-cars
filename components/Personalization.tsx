@@ -1,3 +1,5 @@
+import Link from "next/link";
+
 export default function Personalization() {
   return (
     <section className="px-margin-page py-stack-lg bg-surface-container-low overflow-hidden">
@@ -14,10 +16,12 @@ export default function Personalization() {
             szlachetnej skóry Nappa po unikalne wykończenia lakiernicze. Twój
             samochód jest przedłużeniem Twojej tożsamości.
           </p>
-          <button className="bg-primary-gold text-on-primary-gold px-10 py-5 rounded-2xl font-data-lg text-data-lg gold-glow flex items-center gap-3 transition-transform hover:scale-105">
+          <Link
+            href="/collection"
+            className="w-fit bg-primary-gold text-on-primary-gold px-10 py-5 rounded-2xl font-data-lg text-data-lg gold-glow flex items-center gap-3 transition-transform hover:scale-105">
             Rozpocznij konfigurację
             <span className="material-symbols-outlined">palette</span>
-          </button>
+          </Link>
         </div>
         <div className="w-full md:w-1/2 relative h-96">
           <div

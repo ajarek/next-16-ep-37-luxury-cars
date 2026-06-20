@@ -126,12 +126,12 @@ export default async function CollectionDetailPage({
                   {car.price}
                 </div>
               </div>
-              <button className="bg-primary-gold text-on-primary-gold px-8 py-4 rounded-xl font-data-lg text-data-lg gold-glow gold-glow-hover transition-all flex items-center gap-3 group">
-                Zarezerwuj jazdę
+              <Link href={`/finalising/${car.id}`} className="bg-primary-gold text-on-primary-gold px-8 py-4 rounded-xl font-data-lg text-data-lg gold-glow gold-glow-hover transition-all flex items-center gap-3 group">
+                Kup teraz
                 <span className="material-symbols-outlined group-hover:translate-x-1 transition-transform">
                   arrow_forward
                 </span>
-              </button>
+              </Link>
             </div>
           </div>
 
