@@ -2,9 +2,11 @@
 
 import { useEffect, useRef } from "react";
 import Stat from "@/components/Stat";
+import { useRouter } from "next/navigation";
 
 export default function Hero() {
   const heroRef = useRef<HTMLDivElement>(null);
+  const router = useRouter();
 
   useEffect(() => {
     const handleScroll = () => {
@@ -51,13 +53,13 @@ export default function Hero() {
           publicznych. Precyzja dla tych, którzy nie uznają kompromisów.
         </p>
         <div className="flex flex-wrap gap-4">
-          <button className="bg-primary-gold text-on-primary-gold px-8 py-4 rounded-xl font-data-lg text-data-lg gold-glow gold-glow-hover transition-all flex items-center gap-3 group">
-            Personalizuj
+          <button onClick={() => router.push("/collection")} className="bg-primary-gold text-on-primary-gold px-8 py-4 rounded-xl font-data-lg text-data-lg gold-glow gold-glow-hover transition-all flex items-center gap-3 group">
+            Kolekcja
             <span className="material-symbols-outlined group-hover:translate-x-1 transition-transform">
               arrow_forward
             </span>
           </button>
-          <button className="glass px-8 py-4 rounded-xl font-data-lg text-data-lg hover:bg-white/10 transition-all flex items-center gap-3">
+          <button onClick={() => router.push("/collection/9")} className="glass px-8 py-4 rounded-xl font-data-lg text-data-lg hover:bg-white/10 transition-all flex items-center gap-3">
             <span className="material-symbols-outlined">visibility</span>
             Zobacz Szczegóły
           </button>

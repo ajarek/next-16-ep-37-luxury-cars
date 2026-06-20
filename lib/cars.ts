@@ -1,4 +1,5 @@
 export interface Car {
+  id: number;
   name: string;
   year: string;
   variant: string;
@@ -31,6 +32,7 @@ export interface CollectionCar {
 
 export const cars: Car[] = [
   {
+    id: 13,
     name: "BMW M8",
     year: "2023",
     variant: "Competition Coupe",
@@ -42,6 +44,7 @@ export const cars: Car[] = [
     available: true,
   },
   {
+    id: 12,
     name: "Mercedes AMG GT",
     year: "2024",
     variant: "Performance Edition",
@@ -52,6 +55,7 @@ export const cars: Car[] = [
       "https://lh3.googleusercontent.com/aida-public/AB6AXuDyNkClcM6k79Iufoxxrg6gVPrV4ziZzj3gjrle_M_kEh8V83sa3SROCVBvOIJ9O29JUU7stAe5LprRZvWOqm_aQ9yTztbpFIhm5xtOGniJ8Be2orBlrVSA2TF8A_6uFGORYYDnKpOeS_OPfzmNJ2uea-_Io_M6DjnnncKYNwJSShsMEKlJLFx4moHMMuA-BgUd5NTWW2qtaUFBcMeV--yQgWNTKZOuBCF5Rq8wZrImEgLtiI9cD0sM7uN71uV6wsBloJUTFQI5ImY",
   },
   {
+    id: 14,
     name: "Audi R8 V10",
     year: "2023",
     variant: "Spyder Quattro",

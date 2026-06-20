@@ -2,6 +2,7 @@
 
 import { useRef } from "react";
 import type { Car } from "@/lib/cars";
+import Link from "next/link";
 
 interface CarCardProps {
   car: Car;
@@ -34,9 +35,9 @@ export default function CarCard({ car }: CarCardProps) {
               {car.year} · {car.variant}
             </p>
           </div>
-          <button className="w-10 h-10 rounded-full border border-primary-gold/30 flex items-center justify-center text-primary-gold group-hover:bg-primary-gold group-hover:text-on-primary-gold transition-all">
+          <Link href={`/collection/${car.id}`} className="w-10 h-10 rounded-full border border-primary-gold/30 flex items-center justify-center text-primary-gold group-hover:bg-primary-gold group-hover:text-on-primary-gold transition-all">
             <span className="material-symbols-outlined text-sm">north_east</span>
-          </button>
+          </Link>
         </div>
         <div className="flex gap-2 mb-6">
           <span className="glass px-3 py-1 rounded-full text-[10px] font-label-sm text-on-surface-variant">
