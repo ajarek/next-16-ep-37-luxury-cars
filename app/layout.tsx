@@ -3,6 +3,7 @@ import { Hanken_Grotesk, Geist } from "next/font/google";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import "./globals.css";
+import { ClerkProvider } from "@clerk/nextjs";
 
 const hanken = Hanken_Grotesk({
   subsets: ["latin"],
@@ -33,9 +34,12 @@ export default function RootLayout({
         />
       </head>
       <body className="antialiased">
+        <ClerkProvider> 
+
         <Header />
         <main className="w-full p-4">{children}</main>
         <Footer />
+        </ClerkProvider>
       </body>
     </html>
   );
