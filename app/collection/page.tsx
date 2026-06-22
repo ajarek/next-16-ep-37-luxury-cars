@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import Link from "next/link";
+import { Suspense } from "react";
 import carsData from "@/data/cars.json";
 import type { CollectionCar } from "@/lib/cars";
 import CollectionExplorer from "@/components/CollectionExplorer";
@@ -92,7 +93,13 @@ export default function CollectionPage() {
       </section>
 
       {/* Interaktywny eksplorator z filtrami */}
-      <CollectionExplorer cars={cars} />
+      <Suspense
+        fallback={
+          <div className='px-margin-page py-stack-lg bg-surface min-h-[50vh]' />
+        }
+      >
+        <CollectionExplorer cars={cars} />
+      </Suspense>
     </>
   );
 }

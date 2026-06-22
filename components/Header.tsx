@@ -1,8 +1,9 @@
 "use client"
-import { useState } from "react"
+import { Suspense, useState } from "react"
 import { Show, SignInButton, SignUpButton, UserButton } from "@clerk/nextjs"
 import Link from "next/link"
 import { usePathname } from "next/navigation"
+import SearchBar from "./SearchBar"
 
 const navLinks = [
   { href: "/", label: "Salon" },
@@ -36,16 +37,13 @@ export default function Header() {
           ))}
         </nav>
         <div className='flex items-center gap-4'>
-          <div className='glass px-4 py-2 rounded-full hidden lg:flex items-center gap-2'>
-            <span className='material-symbols-outlined text-on-surface-variant text-sm'>
-              search
-            </span>
-            <input
-              className='bg-transparent border-none focus:ring-0 text-label-sm font-label-sm w-48 outline-none'
-              placeholder='Szukaj modeli...'
-              type='text'
+          <Suspense fallback={<div className='w-48 lg:block hidden' />}>
+            <SearchBar
+              className='hidden lg:flex'
+              inputClassName='w-48'
+              enableHotkey
             />
-          </div>
+          </Suspense>
           <Show when="signed-out">
             <SignInButton>
               <button className='w-10 h-10 flex items-center justify-center rounded-full glass hover:bg-white/5 transition-all duration-300 active:scale-90'>
@@ -110,16 +108,12 @@ export default function Header() {
         </div>
 
         {/* Drawer Search Bar */}
-        <div className='glass px-4 py-2.5 rounded-full flex items-center gap-2'>
-          <span className='material-symbols-outlined text-on-surface-variant text-sm'>
-            search
-          </span>
-          <input
-            className='bg-transparent border-none focus:ring-0 text-label-sm font-label-sm w-full outline-none'
-            placeholder='Szukaj modeli...'
-            type='text'
+        <Suspense fallback={null}>
+          <SearchBar
+            autoFocus
+            onSubmitted={() => setIsMobileMenuOpen(false)}
           />
-        </div>
+        </Suspense>
 
         {/* Drawer Navigation Links */}
         <nav className='flex flex-col gap-2'>
