@@ -1,5 +1,5 @@
 [
-  { 
+  {
     "id": 1,
     "name": "Bugatti Chiron",
     "year": "2024",
@@ -15,7 +15,7 @@
     "available": true,
     "image": "/bugatti.png"
   },
-  { 
+  {
     "id": 2,
     "name": "Pagani Huayra",
     "year": "2024",
@@ -31,7 +31,7 @@
     "available": false,
     "image": "/pagani.png"
   },
-  { 
+  {
     "id": 3,
     "name": "Koenigsegg Jesko",
     "year": "2025",
@@ -47,7 +47,7 @@
     "available": false,
     "image": "/koenigsegg.png"
   },
-  { 
+  {
     "id": 4,
     "name": "McLaren W1",
     "year": "2025",
@@ -63,7 +63,7 @@
     "available": true,
     "image": "/mclaren-w1-2025-3d-model-852dabf54c.png"
   },
-  { 
+  {
     "id": 5,
     "name": "Ferrari SF90",
     "year": "2024",
@@ -127,7 +127,7 @@
     "available": true,
     "image": "/pngtree-bentley.png"
   },
-  { 
+  {
     "id": 9,
     "name": "Porsche 911",
     "year": "2024",
@@ -143,7 +143,7 @@
     "available": true,
     "image": "/porsche.png"
   },
-  { 
+  {
     "id": 10,
     "name": "Range Rover SV",
     "year": "2024",
@@ -159,7 +159,7 @@
     "available": true,
     "image": "/range-rover.png"
   },
-  { 
+  {
     "id": 11,
     "name": "Rolls-Royce Spectre",
     "year": "2024",
@@ -175,7 +175,7 @@
     "available": true,
     "image": "/spectre.png"
   },
-  { 
+  {
     "id": 12,
     "name": "Mercedes-Maybach",
     "year": "2024",
@@ -191,7 +191,7 @@
     "available": true,
     "image": "/mercedes.png"
   },
-   {
+  {
     "id": 13,
     "name": "BMW M8",
     "year": "2023",
@@ -205,7 +205,7 @@
     "badge": "AWD",
     "accent": "#1B3A5B",
     "available": true,
-    "image": "https://lh3.googleusercontent.com/aida-public/AB6AXuDfCnoxMy-12tPqcKdvL_duqoiGo80h92gDxtXjzR8WFoAn6qfTDkyb7SZ6PAVpky8ChrnaIIYdgPtyIAq9PPZgwIGZc4qCE8CejDzmHoq4qNxI9oQc3tCTS_qhU5TbOR6j6K6FV8opYNtMkr-VLdO6pbv0McIHlM4egCX3zgpdoNGhUHKCKR1J4OkVcFvNSZpHeixnC1C5CwtS-VnWfmUWVkZrIGU7WbYhiJCQZ2tShTmdo5bLrFeCrdl3vNpi6WbsRZSj2A9xkmo"
+    "image": "/bmw.png"
   },
   {
     "id": 14,
@@ -221,7 +221,6 @@
     "badge": "Mid-Engine",
     "accent": "#1B3A5B",
     "available": true,
-    "image": "https://lh3.googleusercontent.com/aida-public/AB6AXuBLT3LpIEagPjhiNNZfFCKISQtBh3qMe9FzwdmysPkfChCl5TmFd7-VmJ-rSiA1Egsb4fxRGxdAuS4aDoJZ_ku_BBeiOCWncL9efCC2z_WJAfjuBUc4Mk42TEA5NnY1d_nybmzlu_E0LJ6dkIi_95Bx8HHj9dW3rlIpN_R6pxxnB6oSKT9E8o7vBwy_vFL_0-3O88SoAXdZKw2oqmFBmtecJeqVpgADF_AARu1TOWc02Jwwv_S5DDhO0473ELSzNS4Wg4-v6BpZaZo"
+    "image": "/audi.png"
   }
-  
 ]

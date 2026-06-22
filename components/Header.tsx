@@ -44,7 +44,7 @@ export default function Header() {
               enableHotkey
             />
           </Suspense>
-          <Show when="signed-out">
+          <Show when='signed-out'>
             <SignInButton>
               <button className='w-10 h-10 flex items-center justify-center rounded-full glass hover:bg-white/5 transition-all duration-300 active:scale-90'>
                 <span className='material-symbols-outlined text-primary-gold'>
@@ -60,11 +60,10 @@ export default function Header() {
               </button>
             </SignUpButton>
           </Show>
-          <Show when="signed-in">
+          <Show when='signed-in'>
             <UserButton />
           </Show>
-          
-          {/* Hamburger button for mobile */}
+
           <button
             onClick={() => setIsMobileMenuOpen(true)}
             className='md:hidden w-10 h-10 flex items-center justify-center rounded-full glass hover:bg-white/5 transition-all duration-300 active:scale-90'
@@ -77,21 +76,20 @@ export default function Header() {
         </div>
       </header>
 
-      {/* Backdrop overlay */}
       <div
         className={`fixed inset-0 bg-black/60 backdrop-blur-sm z-50 transition-opacity duration-300 md:hidden ${
-          isMobileMenuOpen ? "opacity-100 pointer-events-auto" : "opacity-0 pointer-events-none"
+          isMobileMenuOpen
+            ? "opacity-100 pointer-events-auto"
+            : "opacity-0 pointer-events-none"
         }`}
         onClick={() => setIsMobileMenuOpen(false)}
       />
 
-      {/* Mobile Drawer Menu */}
       <div
         className={`fixed top-0 right-0 h-full w-80 max-w-[85vw] bg-surface-container/95 backdrop-blur-xl border-l border-white/10 z-50 p-6 flex flex-col gap-6 shadow-2xl transition-transform duration-300 ease-in-out md:hidden ${
           isMobileMenuOpen ? "translate-x-0" : "translate-x-full"
         }`}
       >
-        {/* Drawer Header */}
         <div className='flex justify-between items-center pb-4 border-b border-white/10'>
           <span className='text-headline-lg-mobile font-headline-lg-mobile font-bold text-primary-gold tracking-tighter'>
             LUXE AUTO
@@ -107,15 +105,10 @@ export default function Header() {
           </button>
         </div>
 
-        {/* Drawer Search Bar */}
         <Suspense fallback={null}>
-          <SearchBar
-            autoFocus
-            onSubmitted={() => setIsMobileMenuOpen(false)}
-          />
+          <SearchBar autoFocus onSubmitted={() => setIsMobileMenuOpen(false)} />
         </Suspense>
 
-        {/* Drawer Navigation Links */}
         <nav className='flex flex-col gap-2'>
           {navLinks.map((link) => (
             <Link
@@ -136,7 +129,6 @@ export default function Header() {
           ))}
         </nav>
 
-        {/* Drawer Footer / Branding */}
         <div className='mt-auto pt-6 border-t border-white/5 text-center'>
           <p className='text-label-sm text-on-surface-variant opacity-60 font-medium'>
             Definiujemy na nowo doskonałość motoryzacyjną.

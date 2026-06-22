@@ -6,7 +6,6 @@ import Configurator from "@/components/Configurator"
 
 const cars = carsData as CollectionCar[]
 
-// Metadane konfiguratora — dynamiczny tytuł dla każdego modelu.
 export async function generateMetadata({
   params,
 }: {
@@ -22,7 +21,6 @@ export async function generateMetadata({
   }
 }
 
-// Wstępny render wszystkich ścieżek — każde auto ma własny konfigurator.
 export async function generateStaticParams() {
   return cars.map((car) => ({ id: String(car.id) }))
 }

@@ -1,21 +1,19 @@
-"use client";
+"use client"
 
-import { useState } from "react";
+import { useState } from "react"
 
 export interface FaqItem {
-  question: string;
-  answer: string;
+  question: string
+  answer: string
 }
 
-/* Akordeon w stylu aplikacji — jeden element otwarty naraz.
-   Brak zewnętrznych zależności animacyjnych, rozwijanie sterowane stanem. */
 export default function FaqAccordion({ items }: { items: FaqItem[] }) {
-  const [open, setOpen] = useState<number | null>(0);
+  const [open, setOpen] = useState<number | null>(0)
 
   return (
-    <div className="space-y-3">
+    <div className='space-y-3'>
       {items.map((item, i) => {
-        const isOpen = open === i;
+        const isOpen = open === i
         return (
           <div
             key={item.question}
@@ -25,10 +23,10 @@ export default function FaqAccordion({ items }: { items: FaqItem[] }) {
           >
             <button
               onClick={() => setOpen(isOpen ? null : i)}
-              className="w-full flex items-center justify-between gap-4 p-glass-padding text-left"
+              className='w-full flex items-center justify-between gap-4 p-glass-padding text-left'
               aria-expanded={isOpen}
             >
-              <span className="flex items-center gap-4 min-w-0">
+              <span className='flex items-center gap-4 min-w-0'>
                 <span
                   className={`material-symbols-outlined transition-colors ${
                     isOpen ? "text-primary-gold" : "text-on-surface-variant"
@@ -36,13 +34,15 @@ export default function FaqAccordion({ items }: { items: FaqItem[] }) {
                 >
                   {isOpen ? "help" : "question_mark"}
                 </span>
-                <span className="font-data-lg text-data-lg text-on-surface">
+                <span className='font-data-lg text-data-lg text-on-surface'>
                   {item.question}
                 </span>
               </span>
               <span
                 className={`material-symbols-outlined shrink-0 transition-transform duration-300 ${
-                  isOpen ? "rotate-45 text-primary-gold" : "text-on-surface-variant"
+                  isOpen
+                    ? "rotate-45 text-primary-gold"
+                    : "text-on-surface-variant"
                 }`}
               >
                 add
@@ -55,15 +55,15 @@ export default function FaqAccordion({ items }: { items: FaqItem[] }) {
                   : "grid-rows-[0fr] opacity-0"
               }`}
             >
-              <div className="overflow-hidden">
-                <p className="text-on-surface-variant text-body-md font-body-md px-glass-padding pb-glass-padding pl-[60px]">
+              <div className='overflow-hidden'>
+                <p className='text-on-surface-variant text-body-md font-body-md px-glass-padding pb-glass-padding pl-[60px]'>
                   {item.answer}
                 </p>
               </div>
             </div>
           </div>
-        );
+        )
       })}
     </div>
-  );
+  )
 }

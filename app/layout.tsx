@@ -1,46 +1,47 @@
-import type { Metadata } from "next";
-import { Hanken_Grotesk, Geist } from "next/font/google";
-import Header from "@/components/Header";
-import Footer from "@/components/Footer";
-import "./globals.css";
-import { ClerkProvider } from "@clerk/nextjs";
+import type { Metadata } from "next"
+import { Hanken_Grotesk, Geist } from "next/font/google"
+import Header from "@/components/Header"
+import Footer from "@/components/Footer"
+import "./globals.css"
+import { ClerkProvider } from "@clerk/nextjs"
 
 const hanken = Hanken_Grotesk({
   subsets: ["latin"],
   variable: "--font-hanken",
-});
+})
 
 const geist = Geist({
   subsets: ["latin"],
   variable: "--font-geist",
-});
+})
 
 export const metadata: Metadata = {
   title: "LUXE AUTO",
-  description: "Definiujemy na nowo doskonałość motoryzacyjną dla współczesnych koneserów.",
-};
+  description:
+    "Definiujemy na nowo doskonałość motoryzacyjną dla współczesnych koneserów.",
+}
 
 export default function RootLayout({
   children,
 }: Readonly<{
-  children: React.ReactNode;
+  children: React.ReactNode
 }>) {
   return (
-    <html lang="pl" className={`dark ${hanken.variable} ${geist.variable}`}>
+    <html lang='pl' className={`dark ${hanken.variable} ${geist.variable}`}>
       <head>
+        {/* eslint-disable-next-line @next/next/no-page-custom-font */}
         <link
-          rel="stylesheet"
-          href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap"
+          rel='stylesheet'
+          href='https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap'
         />
       </head>
-      <body className="antialiased">
-        <ClerkProvider> 
-
-        <Header />
-        <main className="w-full p-4">{children}</main>
-        <Footer />
+      <body className='antialiased'>
+        <ClerkProvider>
+          <Header />
+          <main className='w-full p-4'>{children}</main>
+          <Footer />
         </ClerkProvider>
       </body>
     </html>
-  );
+  )
 }

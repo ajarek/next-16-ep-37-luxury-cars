@@ -1,6 +1,6 @@
-import Hero from "@/components/Hero";
-import FeaturedCollection from "@/components/FeaturedCollection";
-import Personalization from "@/components/Personalization";
+import Hero from "@/components/Hero"
+import FeaturedCollection from "@/components/FeaturedCollection"
+import Personalization from "@/components/Personalization"
 
 export default function Home() {
   return (
@@ -9,5 +9,5 @@ export default function Home() {
       <FeaturedCollection />
       <Personalization />
     </>
-  );
+  )
 }

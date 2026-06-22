@@ -1,4 +1,4 @@
-"use client";
+"use client"
 
 import {
   useEffect,
@@ -6,25 +6,23 @@ import {
   useState,
   useTransition,
   type FormEvent,
-} from "react";
-import { useRouter, useSearchParams, usePathname } from "next/navigation";
+} from "react"
+import { useRouter, useSearchParams, usePathname } from "next/navigation"
 
-// Limit długości frazy — chroni przed patologicznie długimi wpisami
-// i utrzymuje czytelność URL-a.
-const MAX_QUERY = 80;
+const MAX_QUERY = 80
 
 interface SearchBarProps {
-  placeholder?: string;
-  /** Dodatkowe klasy kontenera (form) — np. padding czy widoczność. */
-  className?: string;
-  /** Dodatkowe klasy inputa — np. szerokość. */
-  inputClassName?: string;
-  /** Automatyczny focus po zamontowaniu (np. w otwartym menu mobilnym). */
-  autoFocus?: boolean;
-  /** Włącz skrót Cmd/Ctrl+K ustawiający focus w polu. */
-  enableHotkey?: boolean;
-  /** Wywoływane po wysłaniu formularza (np. zamknij menu mobilne). */
-  onSubmitted?: () => void;
+  placeholder?: string
+
+  className?: string
+
+  inputClassName?: string
+
+  autoFocus?: boolean
+
+  enableHotkey?: boolean
+
+  onSubmitted?: () => void
 }
 
 export default function SearchBar({
@@ -35,70 +33,62 @@ export default function SearchBar({
   enableHotkey = false,
   onSubmitted,
 }: SearchBarProps) {
-  const router = useRouter();
-  const pathname = usePathname();
-  const searchParams = useSearchParams();
-  const inputRef = useRef<HTMLInputElement>(null);
-  const [query, setQuery] = useState("");
-  const [isPending, startTransition] = useTransition();
+  const router = useRouter()
+  const pathname = usePathname()
+  const searchParams = useSearchParams()
+  const inputRef = useRef<HTMLInputElement>(null)
+  const [query, setQuery] = useState("")
+  const [isPending, startTransition] = useTransition()
 
-  // Synchronizacja pola z aktywnym parametrem `q` w URL — dzięki temu
-  // fraza widoczna w nagłówku pozostaje spójna z filtrami na stronie kolekcji.
   useEffect(() => {
-    setQuery(searchParams.get("q") ?? "");
-  }, [searchParams]);
+    setQuery(searchParams.get("q") ?? "")
+  }, [searchParams])
 
-  // Focus przy otwarciu (np. menu mobilne).
   useEffect(() => {
-    if (autoFocus) inputRef.current?.focus();
-  }, [autoFocus]);
+    if (autoFocus) inputRef.current?.focus()
+  }, [autoFocus])
 
-  // Skrót Cmd/Ctrl+K → focus w polu wyszukiwania.
   useEffect(() => {
-    if (!enableHotkey) return;
+    if (!enableHotkey) return
     const handler = (e: KeyboardEvent) => {
       if ((e.metaKey || e.ctrlKey) && e.key.toLowerCase() === "k") {
-        e.preventDefault();
-        inputRef.current?.focus();
-        inputRef.current?.select();
+        e.preventDefault()
+        inputRef.current?.focus()
+        inputRef.current?.select()
       }
-    };
-    window.addEventListener("keydown", handler);
-    return () => window.removeEventListener("keydown", handler);
-  }, [enableHotkey]);
+    }
+    window.addEventListener("keydown", handler)
+    return () => window.removeEventListener("keydown", handler)
+  }, [enableHotkey])
 
-  // Sanityzacja: trim + twardy limit długości + encodeURIComponent
-  // chroni przed dziwnymi wpisami i zachowuje poprawny, bezpieczny URL.
   const buildTarget = (value: string) => {
-    const cleaned = value.trim().slice(0, MAX_QUERY);
+    const cleaned = value.trim().slice(0, MAX_QUERY)
     return cleaned
       ? `/collection?q=${encodeURIComponent(cleaned)}`
-      : "/collection";
-  };
+      : "/collection"
+  }
 
   const navigate = (value: string) => {
-    const target = buildTarget(value);
+    const target = buildTarget(value)
     startTransition(() => {
-      // Na stronie kolekcji replace (historia nie rośnie przy iteracyjnym
-      // szukaniu); gdzie indziej push — by użytkownik mógł wrócić.
-      if (pathname === "/collection") router.replace(target);
-      else router.push(target);
-    });
-    onSubmitted?.();
-  };
+      if (pathname === "/collection") router.replace(target)
+      else router.push(target)
+    })
+    onSubmitted?.()
+  }
 
   const handleSubmit = (e: FormEvent) => {
-    e.preventDefault();
-    navigate(query);
-  };
+    e.preventDefault()
+    navigate(query)
+  }
 
   const handleClear = () => {
-    setQuery("");
-    inputRef.current?.focus();
+    setQuery("")
+    inputRef.current?.focus()
     if (pathname === "/collection") {
-      startTransition(() => router.replace("/collection"));
+      startTransition(() => router.replace("/collection"))
     }
-  };
+  }
 
   return (
     <form
@@ -131,7 +121,10 @@ export default function SearchBar({
           aria-label='Wyczyść wyszukiwanie'
           className='text-on-surface-variant hover:text-on-surface transition-colors shrink-0'
         >
-          <span className='material-symbols-outlined text-sm' aria-hidden='true'>
+          <span
+            className='material-symbols-outlined text-sm'
+            aria-hidden='true'
+          >
             close
           </span>
         </button>
@@ -145,5 +138,5 @@ export default function SearchBar({
         </kbd>
       )}
     </form>
-  );
+  )
 }

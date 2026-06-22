@@ -10,9 +10,8 @@ export interface Car {
   available?: boolean;
 }
 
-// Model z kolekcji — rozszerza podstawowy `Car` o dane specyficzne dla strony
-// kolekcji: kategorię (do filtrowania), monogram i akcent kolorystyczny
-// (do generowania autorskiego tła karty), oraz osiągi (0-100, prędkość maks.).
+
+
 export interface CollectionCar {
   id: number;
   name: string;
